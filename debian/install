@@ -1,1 +1,2 @@
 tas2783.conf	usr/share/tas2783-compat/
+wireplumber/tas2783-compat.conf	usr/share/wireplumber/wireplumber.conf.d/

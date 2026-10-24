@@ -1,3 +1,10 @@
+tas2783-compat (20261024.2) unstable; urgency=medium
+
+  * Turn off the Pro Audio profile on HP 8EA1; its probe floods the
+    kernel log.
+
+ -- Kel Modderman <kelvmod@gmail.com>  Sat, 24 Oct 2026 20:44:14 +1000
+
 tas2783-compat (20261024.1) unstable; urgency=medium
 
   * Initial release.

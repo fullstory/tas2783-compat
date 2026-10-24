@@ -19,7 +19,9 @@ Description: stop-gap fixes for TI TAS2783 SoundWire speakers
   * links the HP 8EA1 (OmniBook X Flip 14) amplifier firmware to the
     file names the tas2783-sdw driver requests;
   * adds the alsa-ucm-conf TAS2783 speaker profile, which is newer than
-    the alsa-ucm-conf release in Debian.
+    the alsa-ucm-conf release in Debian;
+  * turns off the WirePlumber "Pro Audio" profile on HP 8EA1, whose probe
+    of the broken amplifier I/V-sense capture floods the kernel log.
  .
  The UCM profile is only linked in when alsa-ucm-conf does not provide
  it, so a newer alsa-ucm-conf takes over by itself.
