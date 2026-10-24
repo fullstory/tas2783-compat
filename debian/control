@@ -1,0 +1,25 @@
+Source: tas2783-compat
+Section: sound
+Maintainer: Kel Modderman <kelvmod@gmail.com>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.7.4
+Vcs-Git: https://github.com/fullstory/tas2783-compat.git
+Vcs-Browser: https://github.com/fullstory/tas2783-compat
+
+Package: tas2783-compat
+Architecture: all
+Depends: ${misc:Depends},
+ alsa-ucm-conf
+Recommends: firmware-misc-nonfree (>= 20260916)
+Description: stop-gap fixes for TI TAS2783 SoundWire speakers
+ Makes the internal speakers work on laptops with TI TAS2783 SoundWire
+ amplifiers where the kernel, linux-firmware and alsa-ucm-conf do not
+ agree yet:
+ .
+  * links the HP 8EA1 (OmniBook X Flip 14) amplifier firmware to the
+    file names the tas2783-sdw driver requests;
+  * adds the alsa-ucm-conf TAS2783 speaker profile, which is newer than
+    the alsa-ucm-conf release in Debian.
+ .
+ The UCM profile is only linked in when alsa-ucm-conf does not provide
+ it, so a newer alsa-ucm-conf takes over by itself.

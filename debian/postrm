@@ -1,0 +1,13 @@
+#!/bin/sh
+set -e
+
+UCM=/usr/share/alsa/ucm2/sof-soundwire/tas2783.conf
+OURS=/usr/share/tas2783-compat/tas2783.conf
+
+if [ "$1" = remove ] || [ "$1" = purge ]; then
+	if [ -L "$UCM" ] && [ "$(readlink "$UCM")" = "$OURS" ]; then
+		rm -f "$UCM"
+	fi
+fi
+
+#DEBHELPER#

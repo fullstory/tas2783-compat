@@ -1,0 +1,8 @@
+tas2783-compat (20261024.1) unstable; urgency=medium
+
+  * Initial release.
+  * Link the HP 8EA1 (OmniBook X Flip 14) amplifier firmware to the
+    names the kernel asks for.
+  * Add the TAS2783 speaker UCM profile until alsa-ucm-conf ships it.
+
+ -- Kel Modderman <kelvmod@gmail.com>  Sat, 24 Oct 2026 20:30:40 +1000

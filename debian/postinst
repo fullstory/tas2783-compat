@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+
+UCM=/usr/share/alsa/ucm2/sof-soundwire/tas2783.conf
+OURS=/usr/share/tas2783-compat/tas2783.conf
+
+# only when alsa-ucm-conf lacks it; a later alsa-ucm-conf overwrites the link
+if [ "$1" = configure ] && [ ! -e "$UCM" ] && [ ! -L "$UCM" ]; then
+	ln -s "$OURS" "$UCM"
+fi
+
+#DEBHELPER#
