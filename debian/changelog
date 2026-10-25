@@ -1,3 +1,9 @@
+tas2783-compat (20261024.3) UNRELEASED; urgency=medium
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 25 Oct 2026 05:36:20 +0100
+
 tas2783-compat (20261024.2) unstable; urgency=medium
 
   * Turn off the Pro Audio profile on HP 8EA1; its probe floods the
